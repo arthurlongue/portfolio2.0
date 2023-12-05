@@ -74,14 +74,19 @@ export default function ImgFetch() {
         ))
       ) : (
         <>
-          <div className="col-span-full flex items-center justify-center pt-20">
-            <div className="spinner-wave">
-              <div className="spinner-wave-dot bg-red-700"></div>
-              <div className="spinner-wave-dot bg-red-700"></div>
-              <div className="spinner-wave- bg-red-700"></div>
-              <div className="spinner-wave-dot bg-red-700"></div>
+          {[...Array(6)].map((_, repetitionIndex) => (
+            <div
+              key={repetitionIndex}
+              className="flex items-center justify-center pt-20"
+            >
+              <div className="spinner-wave">
+                <div className="spinner-wave-dot bg-red-700"></div>
+                <div className="spinner-wave-dot bg-red-700"></div>
+                <div className="spinner-wave-dot bg-red-700"></div>
+                <div className="spinner-wave-dot bg-red-700"></div>
+              </div>
             </div>
-          </div>
+          ))}
         </>
       )}
     </>

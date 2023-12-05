@@ -1,10 +1,13 @@
-import ImgFetch from "../../hooks/ImgFetch";
+import Welcome from "../../hooks/Welcome";
+import About from "../About/About";
+import Hightlights from "../Highlights/Hightlights";
+import Projects from "../Projects/Projects";
 
 export default function Home() {
   return (
     <section id="home">
       <div className="flex flex-row sm:gap-10">
-        <div className="sm:w-full sm:max-w-[18rem]">
+        <div className="3xl:w-full 3xl:max-w-[18rem]">
           <input
             type="checkbox"
             id="sidebar-mobile-fixed"
@@ -14,7 +17,7 @@ export default function Home() {
             htmlFor="sidebar-mobile-fixed"
             className="sidebar-overlay"
           ></label>
-          <aside className="sidebar sidebar-fixed-left sidebar-mobile h-full justify-start max-sm:fixed max-sm:-translate-x-full">
+          <aside className="sidebar sidebar-fixed-left sidebar-mobile h-full justify-start max-3xl:fixed max-3xl:-translate-x-full">
             <section className="sidebar-title items-center p-4">
               <svg
                 fill="none"
@@ -66,7 +69,7 @@ export default function Home() {
                       <span>Projetos</span>
                     </li>
 
-                    <li className="menu-item menu-active">
+                    <li className="menu-item">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         className="h-5 w-5 opacity-75"
@@ -78,183 +81,44 @@ export default function Home() {
                         <path
                           strokeLinecap="round"
                           strokeLinejoin="round"
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
                         />
                       </svg>
                       <span>Sobre</span>
                     </li>
+                    <div className="divider my-0"></div>
                     <li>
-                      <input
-                        type="checkbox"
-                        id="menu-1"
-                        className="menu-toggle"
-                      />
-                      <label
-                        className="menu-item justify-between"
-                        htmlFor="menu-1"
-                      >
-                        <div className="flex gap-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5 opacity-75"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                            />
-                          </svg>
-                          <span>Contato</span>
-                        </div>
-
-                        <span className="menu-icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </span>
+                      <label className="menu-item ml-1">
+                        <a
+                          href="https://github.com/arthurlongue"
+                          target="_blank"
+                        >
+                          <p>
+                            <i className="fa-brands fa-github"></i> Github
+                          </p>
+                        </a>
                       </label>
-
-                      <div className="menu-item-collapse">
-                        <div className="min-h-0">
-                          <label className="menu-item ml-6">
-                            <a
-                              href="https://github.com/arthurlongue"
-                              target="_blank"
-                            >
-                              <p>
-                                Github <i className="fa-brands fa-github"></i>
-                              </p>
-                            </a>
-                          </label>
-                          <label className="menu-item ml-6">
-                            <a
-                              href="https://www.linkedin.com/in/arthur-longue-freitas"
-                              target="_blank"
-                            >
-                              <p>
-                                Linkedin{" "}
-                                <i className="fa-brands fa-linkedin"></i>
-                              </p>
-                            </a>
-                          </label>
-                          <label className="menu-item ml-6">
-                            <a href="mailto:arthurlongue@hotmail.com">
-                              <p>
-                                Email <i className="fa-solid fa-envelope"></i>
-                              </p>
-                            </a>
-                          </label>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </section>
-                <div className="divider my-0"></div>
-                <section className="menu-section px-4">
-                  <span className="menu-title">Settings</span>
-                  <ul className="menu-items">
-                    <li className="menu-item">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        className="opacity-75"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        strokeWidth="2"
-                        stroke="currentColor"
-                        fill="none"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      >
-                        <path
-                          stroke="none"
-                          d="M0 0h24v24H0z"
-                          fill="none"
-                        ></path>
-                        <path d="M7 10l5 -6l5 6"></path>
-                        <path d="M21 10l-2 8a2 2.5 0 0 1 -2 2h-10a2 2.5 0 0 1 -2 -2l-2 -8z"></path>
-                        <path d="M12 15m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
-                      </svg>
-                      Products
                     </li>
                     <li>
-                      <input
-                        type="checkbox"
-                        id="menu-2"
-                        className="menu-toggle"
-                      />
-                      <label
-                        className="menu-item justify-between"
-                        htmlFor="menu-2"
-                      >
-                        <div className="flex gap-2">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="opacity-75"
-                            width="22"
-                            height="22"
-                            viewBox="0 0 24 24"
-                            strokeWidth="2"
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path
-                              stroke="none"
-                              d="M0 0h24v24H0z"
-                              fill="none"
-                            ></path>
-                            <path d="M15 21h-9a3 3 0 0 1 -3 -3v-1h10v2a2 2 0 0 0 4 0v-14a2 2 0 1 1 2 2h-2m2 -4h-11a3 3 0 0 0 -3 3v11"></path>
-                            <path d="M9 7l4 0"></path>
-                            <path d="M9 11l4 0"></path>
-                          </svg>
-                          <span>Contracts</span>
-                        </div>
-
-                        <span className="menu-icon">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            viewBox="0 0 20 20"
-                            fill="currentColor"
-                          >
-                            <path
-                              fillRule="evenodd"
-                              d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                              clipRule="evenodd"
-                            />
-                          </svg>
-                        </span>
+                      <label className="menu-item ml-1">
+                        <a
+                          href="https://www.linkedin.com/in/arthur-longue-freitas"
+                          target="_blank"
+                        >
+                          <p>
+                            <i className="fa-brands fa-linkedin"></i> Linkedin{" "}
+                          </p>
+                        </a>
                       </label>
-
-                      <div className="menu-item-collapse">
-                        <div className="min-h-0">
-                          <label className="menu-item menu-item-disabled ml-6">
-                            Create contract
-                          </label>
-                          <label className="menu-item ml-6">
-                            All contracts
-                          </label>
-                          <label className="menu-item ml-6">
-                            Pending contracts
-                          </label>
-                          <label className="menu-item ml-6">Security</label>
-                        </div>
-                      </div>
+                    </li>
+                    <li>
+                      <label className="menu-item ml-1">
+                        <a href="mailto:arthurlongue@hotmail.com">
+                          <p>
+                            <i className="fa-solid fa-envelope"></i> Email
+                          </p>
+                        </a>
+                      </label>
                     </li>
                   </ul>
                 </section>
@@ -297,18 +161,15 @@ export default function Home() {
           <div className="w-fit">
             <label
               htmlFor="sidebar-mobile-fixed"
-              className="btn btn-primary sm:hidden"
+              className="btn bg-red-800 3xl:hidden"
             >
-              Open Sidebar
+              Menu
             </label>
           </div>
-          <div>
-            <h1 className="p-2 text-5xl text-red-800 lg:p-6">Projetos</h1>
-            <h1>SITE EM CONSTRUÇÃO</h1>
-          </div>
-          <div className="my-4 grid grid-flow-row grid-cols-1 gap-8 xl:grid-cols-2">
-            <ImgFetch></ImgFetch>
-          </div>
+          <Welcome></Welcome>
+          <Hightlights></Hightlights>
+          <Projects></Projects>
+          <About></About>
         </div>
       </div>
     </section>
