@@ -3,6 +3,9 @@ import Typewriter from "typewriter-effect";
 function Welcome() {
   return (
     <div className="py-20 text-3xl">
+      <h1 className="text-6xl">Site em contrução...</h1>
+      <br />
+      <br />
       <Typewriter
         options={{
           strings: [

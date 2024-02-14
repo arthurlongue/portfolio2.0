@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="about flex flex-col items-center">
+    <div id="about" className="about flex flex-col items-center">
       <h1 className="p-2 text-5xl text-red-800 lg:p-6">Sobre mim</h1>
       <img
         className="flex w-52 rounded-full"
