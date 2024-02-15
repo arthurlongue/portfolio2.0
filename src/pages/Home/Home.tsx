@@ -7,7 +7,7 @@ import Projects from "../Projects/Projects";
 export default function Home() {
   return (
     <section id="home">
-      <div className="flex flex-row bg-[url('assets/matrixdarkredbg.jpg')] bg-contain sm:gap-10">
+      <div className="flex flex-row bg-[url(/assets/matrixdarkredbg.jpg)] bg-contain sm:gap-10">
         <div className="3xl:w-full 3xl:max-w-[18rem]">
           <input
             type="checkbox"
