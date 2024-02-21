@@ -6,7 +6,7 @@ function Projects() {
       <div>
         <h1 className="p-2 text-5xl text-red-800 lg:p-6">Outros Projetos</h1>
       </div>
-      <div className="my-4 grid grid-flow-row grid-cols-1 gap-8 xl:grid-cols-2">
+      <div className="my-4 grid w-[85%] grid-flow-row grid-cols-1 gap-x-16 gap-y-24 self-center xl:grid-cols-2 2xl:grid-cols-3">
         <ImgFetch></ImgFetch>
       </div>
     </>

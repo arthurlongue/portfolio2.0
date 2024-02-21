@@ -3,11 +3,12 @@ module.exports = {
   theme: {
     extend: {
       screens: {
+        "xs": "480px",
         "3xl": "1920px",
       },
     },
   },
-  plugins: [require("rippleui")],
+  plugins: [require("rippleui"), require("daisyui")],
   rippleui: {
     defaultStyle: false,
   },

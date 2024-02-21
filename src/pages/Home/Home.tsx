@@ -7,7 +7,7 @@ import Projects from "../Projects/Projects";
 export default function Home() {
   return (
     <section id="home">
-      <div className="flex flex-row bg-[url(/assets/matrixdarkredbg.jpg)] bg-contain sm:gap-10">
+      <div className="flex flex-row bg-[url(/assets/matrixdarkredbg.jpg)] bg-contain ">
         <div className="3xl:w-full 3xl:max-w-[18rem]">
           <input
             type="checkbox"
@@ -47,8 +47,8 @@ export default function Home() {
                 <section className="menu-section px-4">
                   <span className="menu-title">Menu</span>
                   <ul className="menu-items">
-                    <a href="#highlights">
-                      <li className="menu-item">
+                    <li className="menu-item p-0">
+                      <a className="w-full" href="#highlights">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5 opacity-75"
@@ -69,10 +69,10 @@ export default function Home() {
                           />
                         </svg>
                         <span>Projetos</span>
-                      </li>
-                    </a>
-                    <a href="#about">
-                      <li className="menu-item">
+                      </a>
+                    </li>
+                    <li className="menu-item p-0">
+                      <a className="w-full" href="#about">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           className="h-5 w-5 opacity-75"
@@ -88,8 +88,8 @@ export default function Home() {
                           />
                         </svg>
                         <span>Sobre</span>
-                      </li>
-                    </a>
+                      </a>
+                    </li>
                     <div className="divider my-0"></div>
                     <a href="https://github.com/arthurlongue" target="_blank">
                       <li>
@@ -158,13 +158,13 @@ export default function Home() {
             </section>
           </aside>
         </div>
-        <div className="flex w-full flex-col  p-4">
+        <div className="flex w-full flex-col p-4">
           <div className="w-fit">
             <motion.label
               animate={{
-                x: [0, -10, 10],
-                y: [0, 10, -10],
-                scale: [1, 1.1, 0.9],
+                x: [10, 0, 10],
+                y: [0, 10, 0],
+                scale: [0.9, 1.2, 0.9],
               }}
               transition={{
                 duration: 5,
@@ -172,7 +172,7 @@ export default function Home() {
                 repeat: Infinity,
               }}
               htmlFor="sidebar-mobile-fixed"
-              className="btn fixed bottom-4 left-3 h-[60px] w-[60px] rounded-full bg-white bg-opacity-10 p-0 shadow-inner shadow-red-800 sm:left-10 sm:top-10 3xl:hidden"
+              className="btn fixed bottom-4 left-3 z-10 h-[60px] w-[60px] rounded-full bg-white bg-opacity-10 p-0 shadow-inner shadow-red-800 sm:left-10 sm:top-10 3xl:hidden"
             >
               <img
                 alt="svgImg"
