@@ -67,22 +67,35 @@ export default function ImgFetch() {
             key={index}
             className="flex flex-col items-center justify-center rounded-3xl bg-black opacity-90"
           >
+            <p className="pt-2">{`${repositories[index].name}`}</p>
             <img
               src={url}
               alt={`Imagem do Repositório ${index + 1}`}
               className="rounded-3xl"
             />
             <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://arthurlongue.github.io/${repositories[index].name}`}
+            >
+              <p
+                className=" bg-black pt-4 text-2xl
+              font-bold text-white"
+              >
+                Abrir no navegador
+              </p>
+            </a>
+
+            <a
               href={repositories[index].html_url}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-8"
             >
               <p
-                className="rounded-full bg-black px-4 py-2 text-2xl
+                className="rounded-full bg-black py-2 text-2xl
               font-bold text-white"
               >
-                Ver no GitHub <i className="fa-brands fa-github"></i>
+                Repositório do GitHub <i className="fa-brands fa-github"></i>
               </p>
             </a>
           </div>
