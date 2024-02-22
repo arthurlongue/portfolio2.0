@@ -3,7 +3,6 @@ import Welcome from "../../hooks/Welcome";
 import About from "../About/About";
 import Hightlights from "../Highlights/Hightlights";
 import Projects from "../Projects/Projects";
-
 export default function Home() {
   return (
     <section id="home">

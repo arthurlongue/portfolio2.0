@@ -68,11 +68,25 @@ export default function ImgFetch() {
             className="flex flex-col items-center justify-center rounded-3xl bg-black opacity-90"
           >
             <p className="pt-2">{`${repositories[index].name}`}</p>
-            <img
-              src={url}
-              alt={`Imagem do Repositório ${index + 1}`}
-              className="rounded-3xl"
-            />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={`https://arthurlongue.github.io/${repositories[index].name}`}
+              className="group relative"
+            >
+              <img
+                src={url}
+                alt={`Imagem do Repositório ${index + 1}`}
+                className="rounded-3xl transition-all duration-1000 hover:scale-95 hover:cursor-pointer hover:opacity-80"
+              />
+              <p
+                className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-2/4 text-3xl font-bold text-red-700 drop-shadow-md
+                transition-all duration-1000 hover:scale-105  group-hover:block"
+              >
+                Clique para visitar o site
+              </p>
+            </a>
+
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -82,7 +96,7 @@ export default function ImgFetch() {
                 className=" bg-black pt-4 text-2xl
               font-bold text-white"
               >
-                Abrir no navegador
+                Visitar site
               </p>
             </a>
 

@@ -1,38 +1,40 @@
+import { ImageSlider } from "../../components/ImageSlider";
+import { default as img1, default as img4 } from "/assets/active-states.jpg";
+import img2 from "/assets/desktop-preview.jpg";
+import { default as img3, default as img5 } from "/assets/desktop-preview.png";
+
+const IMAGES = [
+  { url: img1, alt: "img One" },
+  { url: img2, alt: "img Two" },
+  { url: img3, alt: "img Three" },
+  { url: img4, alt: "img Four" },
+  { url: img5, alt: "img Five" },
+];
+
 function Hightlights() {
   return (
     <div id="highlights">
       <h1 className="mb-8 px-4 text-5xl text-red-800">Projetos em destaque</h1>
-      {/* <div className="my-4 grid grid-flow-row grid-cols-1 gap-8 xl:grid-cols-3"></div> */}
 
-      <div className="mockup-browser m-auto w-[95%] max-w-7xl bg-red-700 bg-opacity-30">
-        <div className="mockup-browser-toolbar ">
+      <div className="mockup-browser m-auto w-[95%] max-w-7xl  bg-red-950">
+        <div className="mockup-browser-toolbar">
           <div className="input text-red-500">
             https://github.com/arthurlongue
           </div>
         </div>
-        <div className="flex justify-center bg-gray-100 bg-opacity-30 px-4 py-8">
+        <div className="flex justify-center bg-red-50 bg-opacity-10">
           <div
-            className="carousel opacity-90 drop-shadow-2xl carousel-vertical
-      h-[15rem] self-center rounded-box xs:h-[20rem] sm:h-[25rem] md:h-[30rem] lg:h-[40rem]"
+            style={{
+              maxWidth: "1000px",
+              width: "90%",
+              aspectRatio: "10 / 6",
+              margin: "0 auto",
+            }}
           >
-            <div className="carousel-item h-full">
-              <img src="/assets/desktop-preview.png" />
-            </div>
-            <div className="carousel-item h-full">
-              <img src="/assets/desktop-preview.png" />
-            </div>
-            <div className="carousel-item h-full">
-              <img src="/assets/desktop-preview.png" />
-            </div>
-            <div className="carousel-item h-full">
-              <img src="/assets/desktop-preview.png" />
-            </div>
-            <div className="carousel-item h-full">
-              <img src="/assets/desktop-preview.png" />
-            </div>
-            <div className="carousel-item h-full">
-              <img src="/assets/desktop-preview.png" />
-            </div>
+            <ImageSlider images={IMAGES} />
+            {/* <a href="/" style={{ fontSize: "4rem" }}>
+            Link
+          </a> */}
           </div>
         </div>
       </div>
