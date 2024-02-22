@@ -8,10 +8,10 @@ export default function About() {
         alt="foto de perfil"
       />
       <p className="px-4 py-8 md:max-w-[70%] lg:max-w-[60%] xl:max-w-[50%]">
-        Arthur aqui, tenho 25 anos e sou capixaba. Conheci a programação
-        cursando Estatística. Me formei em Gastronomia e atualmente curso
-        Análise e desenvolvimento de sistemas. Gosto de tudo que envolve
-        desenvolvimento Front End e UI/UX.
+        Sou Arthur longue, 25 anos e capixaba. Ao cursar Estatística conheci a
+        programação. Sou graduado em Gastronomia e atualmente curso Análise e
+        Desenvolvimento de Sistemas. Dedico-me ao desenvolvimento Front-End e
+        UI/UX.
       </p>
     </div>
   );
