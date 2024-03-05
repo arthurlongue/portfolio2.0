@@ -34,7 +34,7 @@ function Hightlights() {
 
       <div className="mockup-browser m-auto w-[95%] max-w-7xl bg-red-950">
         <div className="mockup-browser-toolbar ml-0 mr-0 w-full flex-grow">
-          <div className="input text-white">
+          <div className="input text-red-700">
             {imageLink.links.map((link, index) => (
               <a
                 key={index}
