@@ -1,4 +1,5 @@
-import { useState } from "react";
+// imageslider.tsx
+
 import ".././styles/image-slider.css";
 
 type ImageSliderProps = {
@@ -6,11 +7,17 @@ type ImageSliderProps = {
     url: string;
     alt: string;
   }[];
+  links: string[];
+  setImageIndex: React.Dispatch<React.SetStateAction<number>>;
+  imageIndex: number;
 };
 
-export function ImageSlider({ images }: ImageSliderProps) {
-  const [imageIndex, setImageIndex] = useState(0);
-
+export function ImageSlider({
+  images,
+  links,
+  setImageIndex,
+  imageIndex,
+}: ImageSliderProps) {
   function showNextImage() {
     setImageIndex((index) => {
       if (index === images.length - 1) return 0;
@@ -28,7 +35,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
   return (
     <section
       aria-label="Image Slider"
-      className="relative mb-8 sm:mb-10 md:mb-14 mt-5 h-full w-full"
+      className="relative mb-8 mt-5 h-full w-full sm:mb-10 md:mb-14"
     >
       <a href="#after-image-slider-controls" className="skip-link">
         Skip Image Slider Controls
@@ -59,7 +66,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
       >
         <i className="fa-solid fa-arrow-down rounded-full border-2 border-red-500 p-1 text-[1rem] text-white sm:text-[2rem] lg:text-[3rem]"></i>
       </button>
-      <div className="absolute -bottom-8 md:-bottom-10 left-2/4 flex -translate-x-2/4  md:gap-2 md:text-3xl font-bold">
+      <div className="absolute -bottom-8 left-2/4 flex -translate-x-2/4 font-bold  md:-bottom-10 md:gap-2 md:text-3xl">
         {images.map((_, index) => (
           <button
             key={index}
