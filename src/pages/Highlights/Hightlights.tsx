@@ -2,6 +2,7 @@ import { ImageSlider } from "../../components/ImageSlider";
 import { default as img1, default as img4 } from "/assets/active-states.jpg";
 import img2 from "/assets/desktop-preview.jpg";
 import { default as img3, default as img5 } from "/assets/desktop-preview.png";
+import img3 from "/assets/desktop-preview.jpg";
 
 const IMAGES = [
   { url: img1, alt: "img One" },
@@ -16,14 +17,14 @@ function Hightlights() {
     <div id="highlights">
       <h1 className="mb-8 px-4 text-5xl text-red-800">Projetos em destaque</h1>
 
-      <div className="mockup-browser m-auto w-[95%] max-w-7xl  bg-red-950">
+      <div className="mockup-browser m-auto w-[95%] max-w-7xl bg-red-950">
         <div className="mockup-browser-toolbar">
           <div className="input text-red-500">
             https://github.com/arthurlongue
           </div>
         </div>
         <div className="flex justify-center bg-red-50 bg-opacity-10">
-          <div
+          <div className=""
             style={{
               maxWidth: "1000px",
               width: "90%",

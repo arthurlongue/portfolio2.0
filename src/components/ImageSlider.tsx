@@ -28,7 +28,7 @@ export function ImageSlider({ images }: ImageSliderProps) {
   return (
     <section
       aria-label="Image Slider"
-      className="relative mb-7 mt-5 h-full w-full"
+      className="relative mb-8 sm:mb-10 md:mb-14 mt-5 h-full w-full"
     >
       <a href="#after-image-slider-controls" className="skip-link">
         Skip Image Slider Controls
@@ -47,24 +47,24 @@ export function ImageSlider({ images }: ImageSliderProps) {
       </div>
       <button
         onClick={showPrevImage}
-        className="img-slider-btn absolute bottom-0 left-0 top-0 block cursor-pointer p-4 drop-shadow-lg"
+        className="img-slider-btn absolute -left-3 bottom-0 top-0 block cursor-pointer drop-shadow-lg sm:-left-4 lg:-left-6"
         aria-label="View Previous Image"
       >
-        <i className="fa-regular fa-circle-up text-3xl text-red-500"></i>
+        <i className="fa-solid fa-arrow-up rounded-full border-2 border-red-500 p-1 text-[1rem] text-white sm:text-[2rem] lg:text-[3rem]"></i>
       </button>
       <button
         onClick={showNextImage}
-        className="img-slider-btn absolute bottom-0 right-0 top-0 block cursor-pointer p-4 drop-shadow-md"
+        className="img-slider-btn absolute -right-3 bottom-0 top-0 block cursor-pointer drop-shadow-lg sm:-right-4 lg:-right-6"
         aria-label="View Next Image"
       >
-        <i className="fa-regular fa-circle-down text-3xl text-red-500"></i>
+        <i className="fa-solid fa-arrow-down rounded-full border-2 border-red-500 p-1 text-[1rem] text-white sm:text-[2rem] lg:text-[3rem]"></i>
       </button>
-      <div className="absolute -bottom-5 left-2/4 flex -translate-x-2/4 gap-1 font-bold items-baseline">
+      <div className="absolute -bottom-8 md:-bottom-10 left-2/4 flex -translate-x-2/4  md:gap-2 md:text-3xl font-bold">
         {images.map((_, index) => (
           <button
             key={index}
-            className={`img-slider-dot-btn ${
-              index === imageIndex ? `text-xl scale-125` : ""
+            className={`img-slider-dot-btn h-max ${
+              index === imageIndex ? `scale-125 text-xl` : ""
             }`}
             aria-label={`View Image ${index + 1}`}
             onClick={() => setImageIndex(index)}

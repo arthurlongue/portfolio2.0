@@ -67,7 +67,7 @@ export default function ImgFetch() {
             key={index}
             className="flex flex-col items-center justify-center rounded-3xl bg-black opacity-90"
           >
-            <p className="pt-2">{`${repositories[index].name}`}</p>
+            <p className="p-4 text-2xl font-bold">{`${repositories[index].name}`}</p>
             <a
               target="_blank"
               rel="noopener noreferrer"
@@ -81,37 +81,38 @@ export default function ImgFetch() {
               />
               <p
                 className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-2/4 text-3xl font-bold text-red-700 drop-shadow-md
-                transition-all duration-1000 hover:scale-105  group-hover:block"
+                transition-all duration-1000 hover:scale-105 group-hover:block"
               >
                 Clique para visitar o site
               </p>
             </a>
 
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href={`https://arthurlongue.github.io/${repositories[index].name}`}
-            >
-              <p
-                className=" bg-black pt-4 text-2xl
-              font-bold text-white"
+            <div className="flex gap-x-8 flex-wrap justify-center">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={`https://arthurlongue.github.io/${repositories[index].name}`}
               >
-                Visitar site
-              </p>
-            </a>
-
-            <a
-              href={repositories[index].html_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <p
-                className="rounded-full bg-black py-2 text-2xl
-              font-bold text-white"
+                <p
+                  className=" mt-4 rounded-full border-2
+                border-white bg-black p-2 text-2xl font-bold text-white"
+                >
+                  Visitar site
+                </p>
+              </a>
+              <a
+                href={repositories[index].html_url}
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Repositório do GitHub <i className="fa-brands fa-github"></i>
-              </p>
-            </a>
+                <p
+                  className="rounded-full mt-4 p-2 border-2 border-white bg-black py-2 text-2xl
+                font-bold text-white"
+                >
+                  GitHub <i className="fa-brands fa-github"></i>
+                </p>
+              </a>
+            </div>
           </div>
         ))
       ) : (

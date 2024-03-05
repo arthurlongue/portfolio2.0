@@ -171,7 +171,7 @@ export default function Home() {
                 repeat: Infinity,
               }}
               htmlFor="sidebar-mobile-fixed"
-              className="btn fixed bottom-4 left-3 z-10 h-[60px] w-[60px] rounded-full bg-white bg-opacity-10 p-0 shadow-inner shadow-red-800 sm:left-10 sm:top-10 3xl:hidden"
+              className="btn fixed bottom-4 left-3 z-10 h-[60px] w-[60px] rounded-full bg-blue-400 p-0 shadow-inner shadow-blue-200 bg-opacity-30 sm:left-10 sm:top-10 3xl:hidden"
             >
               <img
                 alt="svgImg"
