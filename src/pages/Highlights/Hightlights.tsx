@@ -1,8 +1,8 @@
 import { ImageSlider } from "../../components/ImageSlider";
 import { default as img1, default as img4 } from "/assets/active-states.jpg";
-import img2 from "/assets/desktop-preview.jpg";
-import { default as img3, default as img5 } from "/assets/desktop-preview.png";
 import img3 from "/assets/desktop-preview.jpg";
+import img5 from "/assets/desktop-preview.png";
+import img2 from "/assets/finances-preview.jpg";
 
 const IMAGES = [
   { url: img1, alt: "img One" },
@@ -24,7 +24,8 @@ function Hightlights() {
           </div>
         </div>
         <div className="flex justify-center bg-red-50 bg-opacity-10">
-          <div className=""
+          <div
+            className=""
             style={{
               maxWidth: "1000px",
               width: "90%",
